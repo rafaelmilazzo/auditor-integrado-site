@@ -1,0 +1,280 @@
+/* Tema e extensões específicas da landing page Auditor Fiscal Integrado */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+:root {
+  --color-bg-page: #080d17;
+  --color-bg-surface: rgba(17, 26, 46, 0.72);
+  --color-bg-subtle: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-text-inverse: #06281e;
+  --color-primary: #2dd4bf;
+  --color-primary-hover: #14b8a6;
+}
+
+body {
+  background-image: radial-gradient(
+    ellipse 80% 45% at 50% -10%,
+    rgba(45, 212, 191, 0.14),
+    transparent
+  );
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+.ds-card {
+  backdrop-filter: blur(12px);
+}
+
+.afi-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(11, 18, 32, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.afi-header__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.afi-brand {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.afi-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.afi-nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+
+.afi-nav a:hover {
+  color: var(--color-text-primary);
+}
+
+.afi-menu-toggle {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.afi-main {
+  max-width: 1080px;
+  margin: var(--space-8) auto;
+  padding: 0 var(--space-4);
+  gap: var(--space-8);
+}
+
+.afi-bento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.afi-bento > :first-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .afi-bento {
+    grid-template-columns: 1fr;
+  }
+}
+
+.afi-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+}
+
+.afi-tab[aria-selected="true"] {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.afi-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.afi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  min-width: 560px;
+}
+
+.afi-table th,
+.afi-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.afi-table th {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.afi-faq-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) 0;
+}
+
+.afi-faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.afi-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  z-index: 50;
+}
+
+.afi-modal-backdrop[data-open="true"] {
+  display: flex;
+}
+
+.afi-modal {
+  max-width: 560px;
+  width: 100%;
+}
+
+.afi-terms-box {
+  max-height: 180px;
+  overflow-y: auto;
+  padding: var(--space-3);
+  background: var(--color-bg-page);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.afi-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-4) 0;
+}
+
+.afi-slide {
+  position: absolute;
+  margin: 0;
+  width: min(540px, 78%);
+  transition: transform 0.35s ease, opacity 0.35s ease, border-color 0.25s ease;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  background: var(--color-bg-page);
+}
+
+.afi-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.afi-slide[data-pos="center"] {
+  position: relative;
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+  cursor: zoom-in;
+  border-color: rgba(45, 212, 191, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.afi-slide[data-pos="left"] {
+  transform: translateX(-52%) scale(0.84);
+  opacity: 0.38;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.afi-slide[data-pos="right"] {
+  transform: translateX(52%) scale(0.84);
+  opacity: 0.38;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.afi-slide[data-pos="left"]:hover,
+.afi-slide[data-pos="right"]:hover {
+  opacity: 0.65;
+}
+
+.afi-lightbox-img {
+  max-width: 92vw;
+  max-height: 86vh;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.ds-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .afi-menu-toggle {
+    display: inline-flex;
+  }
+
+  .afi-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-4);
+    background: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .afi-nav[data-open="true"] {
+    display: flex;
+  }
+}

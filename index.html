@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auditor Fiscal Integrado — XML e EFD organizados para análise fiscal</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="components/card.css" />
+  <link rel="stylesheet" href="components/button.css" />
+  <link rel="stylesheet" href="components/badge.css" />
+  <link rel="stylesheet" href="components/alert.css" />
+  <link rel="stylesheet" href="styles/auditor-integrado.css" />
+</head>
+<body>
+  <header class="afi-header">
+    <div class="afi-header__inner">
+      <a class="afi-brand" href="#">Auditor Fiscal Integrado</a>
+      <nav id="main-nav" class="afi-nav" data-open="false" aria-label="Navegação principal">
+        <a href="#fluxo">Entradas e saídas</a>
+        <a href="#telas">Telas</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#download">Download</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <div class="ds-row">
+        <a class="ds-btn" data-variant="primary" data-size="sm" href="#download">Baixar</a>
+        <button id="menu-toggle" class="ds-btn afi-menu-toggle" data-variant="secondary" data-size="sm" type="button" aria-expanded="false" aria-controls="main-nav">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="afi-main ds-stack">
+    <div class="ds-alert" data-variant="info" role="status">
+      Programa em fase inicial de desenvolvimento. O retorno sobre erros e sugestões é fundamental para a evolução.
+    </div>
+
+    <!-- Hero -->
+    <section class="ds-card">
+      <div class="ds-card__body ds-stack">
+        <div class="ds-row">
+          <span class="ds-badge" data-variant="primary">v8.2.5</span>
+          <span class="ds-badge" data-variant="success">100% Local · Windows 10/11</span>
+        </div>
+        <h1>XML e EFD organizados para a análise fiscal.</h1>
+        <p>Carregue arquivos NF-e, NFC-e e EFD e receba planilhas XLSX prontas para revisão, pastas organizadas e espelhos PDF — tudo rodando localmente no seu computador.</p>
+        <div class="ds-row">
+          <a class="ds-btn" data-variant="primary" data-size="lg" href="#download">Baixar o programa</a>
+          <a class="ds-btn" data-variant="secondary" data-size="lg" href="#telas">Ver as telas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entradas e saídas -->
+    <section id="fluxo" class="ds-stack">
+      <h2>Entradas e saídas</h2>
+      <div class="afi-bento">
+        <article class="ds-card"><div class="ds-card__body"><h3>NF-e / NFC-e (XML)</h3><p>Organiza por período/chave e gera planilhas prontas para conferência.</p></div></article>
+        <article class="ds-card"><div class="ds-card__body"><h3>EFD SPED Fiscal</h3><p>Extrai blocos e registros relevantes sem depender de nuvem.</p></div></article>
+        <article class="ds-card"><div class="ds-card__body"><h3>Cruzamentos (Malhas 1–5)</h3><p>Cruza documentos e aponta divergências automaticamente.</p></div></article>
+      </div>
+    </section>
+
+    <!-- Telas com abas -->
+    <section id="telas" class="ds-card">
+      <header class="ds-card__header">
+        <h2>Conheça as telas</h2>
+        <div class="afi-tabs" role="tablist">
+          <button class="ds-btn afi-tab" data-variant="secondary" data-size="sm" data-tab-target="tab-extrator" aria-selected="true" type="button">Extrator &amp; Carga</button>
+          <button class="ds-btn afi-tab" data-variant="secondary" data-size="sm" data-tab-target="tab-malhas" aria-selected="false" type="button">Auditoria &amp; Malhas</button>
+          <button class="ds-btn afi-tab" data-variant="secondary" data-size="sm" data-tab-target="tab-resultados" aria-selected="false" type="button">Resultados</button>
+        </div>
+      </header>
+      <div class="ds-card__body ds-stack">
+        <p id="stage-caption" style="margin: 0;">Central de carga de XML, EFD, ZIP, Dossiê e SINCAD com log de processamento em tempo real.</p>
+        <div class="afi-stage">
+          <figure class="afi-slide" data-slide="0" data-pos="center" data-caption="Central de carga de XML, EFD, ZIP, Dossiê e SINCAD com log de processamento em tempo real.">
+            <img src="img/extrator.png" alt="Tela Extrator e Carga" />
+          </figure>
+          <figure class="afi-slide" data-slide="1" data-pos="right" data-caption="Visualização das Malhas 1 a 5 com filtros por divergência e exportação direta.">
+            <img src="img/malhas.png" alt="Tela Auditoria e Malhas" />
+          </figure>
+          <figure class="afi-slide" data-slide="2" data-pos="left" data-caption="Planilhas XLSX e espelhos PDF organizados na pasta do contribuinte.">
+            <img src="img/resultados.png" alt="Tela Resultados" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segurança -->
+    <section id="seguranca" class="ds-stack">
+      <h2>Os dados do contribuinte ficam no seu computador.</h2>
+      <div class="ds-grid">
+        <article class="ds-card"><div class="ds-card__body"><h3>100% Local</h3><p>Nenhum XML, EFD ou planilha é enviado para servidores externos ou nuvem.</p></div></article>
+        <article class="ds-card"><div class="ds-card__body"><h3>Banco Isolado</h3><p>Cada contribuinte ou projeto mantém sua base organizada localmente.</p></div></article>
+        <article class="ds-card"><div class="ds-card__body"><h3>Licença Assinada</h3><p>Validação offline por arquivo <code>.lic</code> assinado, sem rastreamento.</p></div></article>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="ds-card">
+      <header class="ds-card__header">
+        <h2>Baixe, instale e ative</h2>
+      </header>
+      <div class="ds-card__body ds-stack">
+        <div class="ds-alert" data-variant="warning" role="alert">
+          Se já tiver uma versão anterior instalada, desinstale antes de executar o novo instalador.
+        </div>
+        <div class="ds-row">
+          <a class="ds-btn" data-variant="primary" data-size="lg" href="https://www.auditorintegrado.com.br/downloads/Auditor_Fiscal_Integrado_v8.2.5_Pacote_Completo.zip" data-download-file="Auditor_Fiscal_Integrado_v8.2.5_Pacote_Completo.zip">
+            Baixar pacote completo (.zip · 19,7 MB)
+          </a>
+          <a class="ds-btn" data-variant="secondary" data-size="md" href="https://www.auditorintegrado.com.br/downloads/Auditor_Fiscal_Integrado_Setup_v8.2.5.exe" data-download-file="Auditor_Fiscal_Integrado_Setup_v8.2.5.exe">
+            Instalador (.exe)
+          </a>
+          <a class="ds-btn" data-variant="secondary" data-size="md" href="https://www.auditorintegrado.com.br/downloads/licenca_usuario_2026-11-26.lic" data-download-file="licenca_usuario_2026-11-26.lic">
+            Licença (.lic)
+          </a>
+        </div>
+
+        <div class="afi-table-wrap" aria-label="Últimas atualizações">
+          <table class="afi-table">
+            <thead>
+              <tr>
+                <th>Versão</th>
+                <th>Data</th>
+                <th>Novidades</th>
+                <th>SHA-256</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="ds-badge" data-variant="primary">8.2.5</span></td>
+                <td>16/11/2026</td>
+                <td>Melhorias no Extrator &amp; Carga e Malhas 1–5</td>
+                <td><code>a1b2c3...9f</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Novidades (compacto, sem formulários mortos) -->
+    <section class="ds-card">
+      <div class="ds-card__body ds-row">
+        <span class="ds-badge">Em breve</span>
+        <p style="margin: 0;">Avisos de novas versões por e-mail, canal no WhatsApp e solicitação de chave de teste serão liberados nas próximas atualizações.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="ds-card">
+      <header class="ds-card__header"><h2>Dúvidas frequentes</h2></header>
+      <div class="ds-card__body">
+        <details class="afi-faq-item">
+          <summary>Os dados do contribuinte vão para a nuvem?</summary>
+          <p>Não. Todo o processamento ocorre 100% localmente no seu computador.</p>
+        </details>
+        <details class="afi-faq-item">
+          <summary>O Windows SmartScreen exibiu um alerta. É normal?</summary>
+          <p>Sim, em versões iniciais sem certificado EV. Clique em "Mais informações" e depois em "Executar assim mesmo".</p>
+        </details>
+      </div>
+    </section>
+    <!-- Contato / Rodapé -->
+    <footer class="ds-card">
+      <div class="ds-card__body ds-row" style="justify-content: space-between;">
+        <p style="margin: 0;">Ferramenta independente em fase inicial de desenvolvimento.</p>
+        <a class="ds-btn" data-variant="secondary" data-size="sm" href="mailto:contato@auditorintegrado.com.br">
+          contato@auditorintegrado.com.br
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal de Termos -->
+  <div id="terms-modal" class="afi-modal-backdrop" data-open="false" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+    <article class="ds-card afi-modal">
+      <header class="ds-card__header">
+        <h2 id="terms-title">Termos de uso (v1.0)</h2>
+        <p>Arquivo selecionado: <strong id="terms-filename"></strong></p>
+      </header>
+      <div class="ds-card__body ds-stack">
+        <div class="afi-terms-box">
+          Ferramenta independente de apoio à análise fiscal. Os dados permanecem localmente no computador do usuário. O uso e a conferência dos resultados são de responsabilidade do usuário.
+        </div>
+        <label><input id="terms-check-1" type="checkbox" /> Li e concordo com os Termos de Uso.</label>
+        <label><input id="terms-check-2" type="checkbox" /> Entendo que é uma ferramenta independente em fase inicial.</label>
+      </div>
+      <footer class="ds-card__footer">
+        <button id="terms-cancel" class="ds-btn" data-variant="secondary" data-size="md" type="button">Cancelar</button>
+        <button id="terms-accept" class="ds-btn" data-variant="primary" data-size="md" type="button" disabled>Aceitar e baixar</button>
+      </footer>
+    </article>
+  </div>
+
+  <!-- Lightbox de imagens -->
+  <div id="lightbox-modal" class="afi-modal-backdrop" data-open="false" role="dialog" aria-modal="true" aria-label="Visualização ampliada">
+    <img id="lightbox-img" class="afi-lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="scripts/auditor-integrado.js"></script>
+</body>
+</html>
