@@ -5,6 +5,7 @@
   gap: var(--space-2);
   font-family: var(--font-sans);
   font-weight: 500;
+  text-decoration: none;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   cursor: pointer;
