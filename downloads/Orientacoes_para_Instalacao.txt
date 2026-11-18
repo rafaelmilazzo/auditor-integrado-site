@@ -1,0 +1,160 @@
+﻿========================================================
+AUDITOR FISCAL INTEGRADO
+Orientações para instalação, ativação e uso
+Versão de teste 8.2.5
+========================================================
+
+Este pacote contém:
+  - O instalador do programa (Auditor_Fiscal_Integrado_Setup_v8.2.5.exe)
+  - O arquivo de licença de teste (licenca_usuario_AAAA-MM-DD.lic)
+  - Este arquivo de orientações
+
+O programa está em FASE INICIAL DE DESENVOLVIMENTO. Seu retorno
+sobre erros e sugestões é fundamental. Veja a seção 8.
+
+
+--------------------------------------------------------
+1) REQUISITOS
+--------------------------------------------------------
+  - Windows 10 ou Windows 11.
+  - Permissão para instalar programas no computador.
+  - Não é preciso internet para usar o programa. A internet só é
+    necessária para baixar o instalador, a licença e novas versões.
+
+
+--------------------------------------------------------
+2) ANTES DE INSTALAR UMA NOVA VERSÃO
+--------------------------------------------------------
+Se já existe uma versão instalada, desinstale-a primeiro:
+
+  a) Abra Configurações > Aplicativos > Aplicativos instalados.
+  b) Procure por "Auditor Fiscal Integrado".
+  c) Clique em Desinstalar.
+
+Recomendação: antes de desinstalar ou atualizar, faça uma cópia de
+segurança da pasta de dados do programa (veja a seção 6).
+
+
+--------------------------------------------------------
+3) INSTALAÇÃO
+--------------------------------------------------------
+  a) Extraia o conteúdo deste arquivo .zip para uma pasta do seu
+     computador (clique com o botão direito > Extrair tudo).
+  b) Dê duplo clique no instalador (.exe) e siga as telas.
+
+Se o Windows exibir um alerta azul (SmartScreen) dizendo que
+protegeu o computador:
+  - Clique em "Mais informações".
+  - Em seguida, clique em "Executar assim mesmo".
+Isso acontece porque o instalador ainda não possui certificado de
+assinatura pago. Para conferir a integridade do arquivo, compare o
+código SHA-256 do instalador com o publicado na página de download
+(no PowerShell: Get-FileHash .\NomeDoInstalador.exe -Algorithm SHA256).
+
+
+--------------------------------------------------------
+4) ATIVAÇÃO DA LICENÇA
+--------------------------------------------------------
+Ao abrir o programa pela primeira vez, aparece a tela de
+"Ativação Obrigatória".
+
+  a) Clique em "Importar .lic".
+  b) Selecione o arquivo de licença deste pacote
+     (licenca_usuario_xxx.lic).
+  c) Clique em "Ativar e Entrar", se o programa não abrir sozinho.
+
+Alternativa: cole no campo de chave um código que comece com AFI1.
+
+A licença tem data de validade (está no nome do arquivo). Quando
+vencer, o programa deixa de abrir. Baixe a licença mais recente na
+página de download e importe novamente. Seus dados permanecem no
+computador.
+
+Se a licença não for aceita, clique em "Copiar HWID" na tela de
+ativação e envie esse código ao autor, junto com o nome do arquivo
+de licença que você tentou usar.
+
+
+--------------------------------------------------------
+5) COMO USAR (VISÃO GERAL)
+--------------------------------------------------------
+  1. EXTRAIR os arquivos nos sistemas de origem.
+  2. ARRASTAR ou COLAR os arquivos juntos na aba "Extrator & Carga".
+  3. CONSULTAR Dossiê, Malhas e Resultados.
+
+Arquivos que o programa lê:
+  - EFD (SPED Fiscal, .txt ou .zip): extraídos do Extrator IDFe.
+  - NF-e e NFC-e (.xml ou .zip): extraídos do Extrator IDFe.
+  - Dossiê do Contribuinte (.xlsx): SSA > Plafis WEB > Dossiê 2.0 >
+    Consulta Dossiê do Contribuinte > Exportar Excel.
+  - Planilha Relação de RAF (.xlsx): Plafis WEB > Painel > Painel
+    Auditor Fiscal > Exportar RAF's.
+  - SINCAD do Contribuinte (.pdf): SSA > SINCAD > Consultar Dados
+    Cadastrais > selecionar a Inscrição Estadual e imprimir PDF.
+
+O que o programa entrega:
+  - Planilhas de NF-e e NFC-e (analíticas e sintéticas), em .xlsx.
+  - EFDs organizadas em pastas, com espelhos em PDF e XLSX.
+  - Planilha de apuração consolidada das EFD.
+  - Cruzamentos de auditoria (Roteiro e Malhas 1 a 5), exportados
+    para Excel.
+
+Dica: a tela "Orientações ao Usuário", dentro do programa, repete
+o caminho de cada arquivo. Tente usar o máximo possível de
+funcionalidades.
+
+
+--------------------------------------------------------
+6) ONDE FICAM OS DADOS
+--------------------------------------------------------
+Todo o processamento e o armazenamento são feitos LOCALMENTE, no
+seu computador. O programa não envia dados fiscais, cadastrais ou
+resultados para servidores externos.
+
+A base de dados fica na pasta do seu usuário do Windows:
+  %LOCALAPPDATA%\Auditor_Fiscal_Integrado_Dados
+
+(Para abrir: pressione Windows + R, digite o caminho acima e
+pressione Enter.)
+
+Faça cópias de segurança dessa pasta com regularidade e proteja o
+computador contra acesso indevido.
+
+
+--------------------------------------------------------
+7) RESPONSABILIDADE E CONDIÇÕES DE USO
+--------------------------------------------------------
+  - O programa é uma FERRAMENTA DE TRABALHO para a auditoria fiscal.
+    Não é um produto oficial e NÃO TEM nenhuma relação institucional
+    com órgãos públicos.
+  - O uso dos dados produzidos e de seus resultados é de
+    RESPONSABILIDADE DO USUÁRIO, inclusive quanto à consistência e à
+    veracidade dos resultados.
+  - Os resultados devem SEMPRE ser conferidos ou confrontados com os
+    documentos e as fontes originais antes de qualquer uso.
+  - O autor não garante o resultado e não responde por danos
+    decorrentes do uso do programa.
+  - Use apenas arquivos que você tem autorização para tratar e
+    observe o sigilo fiscal, a LGPD e as normas do seu órgão ou
+    empresa.
+  - Não compartilhe nem publique o arquivo de licença.
+
+O texto completo dos Termos de Uso está na página de download.
+
+
+--------------------------------------------------------
+8) COMO REPORTAR ERROS E ENVIAR SUGESTÕES
+--------------------------------------------------------
+Envie para: contato@auditorintegrado.com.br
+
+Informe:
+  - A versão do programa (aparece no canto da janela).
+  - A tela em que o problema ocorreu.
+  - O passo a passo para repetir o erro.
+  - O que você esperava e o que aconteceu.
+  - Uma captura de tela, SE NÃO houver dados identificáveis.
+
+IMPORTANTE: NÃO envie XMLs, EFDs, planilhas ou capturas de tela
+com dados reais de contribuintes.
+
+Obrigado por testar. Seu retorno ajuda a melhorar o programa!
