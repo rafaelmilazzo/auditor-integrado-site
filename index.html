@@ -25,7 +25,7 @@
         <a href="#faq">Dúvidas</a>
       </nav>
       <div class="ds-row">
-        <a class="ds-btn" data-variant="primary" data-size="sm" href="#download">Baixar</a>
+        <button class="ds-btn" data-variant="secondary" data-size="sm" disabled title="Download temporariamente indisponível">Download em breve</button>
         <button id="menu-toggle" class="ds-btn afi-menu-toggle" data-variant="secondary" data-size="sm" type="button" aria-expanded="false" aria-controls="main-nav">
           Menu
         </button>
@@ -48,7 +48,9 @@
         <h1>XML e EFD organizados para a análise fiscal.</h1>
         <p>Carregue arquivos NF-e, NFC-e e EFD e receba planilhas XLSX prontas para revisão, pastas organizadas e espelhos PDF — tudo rodando localmente no seu computador.</p>
         <div class="ds-row">
-          <a class="ds-btn" data-variant="primary" data-size="lg" href="#download">Baixar o programa</a>
+          <button class="ds-btn" data-variant="secondary" data-size="lg" disabled>
+            Nova versão em preparação
+          </button>
           <a class="ds-btn" data-variant="secondary" data-size="lg" href="#telas">Ver as telas</a>
         </div>
       </div>
@@ -103,22 +105,22 @@
     <!-- Download -->
     <section id="download" class="ds-card">
       <header class="ds-card__header">
-        <h2>Baixe, instale e ative</h2>
+        <h2>Download e Atualização</h2>
       </header>
       <div class="ds-card__body ds-stack">
-        <div class="ds-alert" data-variant="warning" role="alert">
-          Se já tiver uma versão anterior instalada, desinstale antes de executar o novo instalador.
+        <div class="ds-alert" data-variant="info" role="status">
+          <strong>Downloads temporariamente suspensos:</strong> Estamos implementando novas melhorias importantes (incluindo sistema de atualização automática). Uma nova versão completa estará disponível para download muito em breve.
         </div>
         <div class="ds-row">
-          <a class="ds-btn" data-variant="primary" data-size="lg" href="https://www.auditorintegrado.com.br/downloads/Auditor_Fiscal_Integrado_v8.2.5_Pacote_Completo.zip" data-download-file="Auditor_Fiscal_Integrado_v8.2.5_Pacote_Completo.zip">
-            Baixar pacote completo (.zip · 19,7 MB)
-          </a>
-          <a class="ds-btn" data-variant="secondary" data-size="md" href="https://www.auditorintegrado.com.br/downloads/Auditor_Fiscal_Integrado_Setup_v8.2.5.exe" data-download-file="Auditor_Fiscal_Integrado_Setup_v8.2.5.exe">
-            Instalador (.exe)
-          </a>
-          <a class="ds-btn" data-variant="secondary" data-size="md" href="https://www.auditorintegrado.com.br/downloads/licenca_usuario_2026-11-26.lic" data-download-file="licenca_usuario_2026-11-26.lic">
-            Licença (.lic)
-          </a>
+          <button class="ds-btn" data-variant="secondary" data-size="lg" disabled>
+            Pacote completo (.zip) — Em breve
+          </button>
+          <button class="ds-btn" data-variant="secondary" data-size="md" disabled>
+            Instalador (.exe) — Em breve
+          </button>
+          <button class="ds-btn" data-variant="secondary" data-size="md" disabled>
+            Licença (.lic) — Em breve
+          </button>
         </div>
 
         <div class="afi-table-wrap" aria-label="Últimas atualizações">
