@@ -4,10 +4,10 @@
     "produto": "auditor_fiscal_integrado",
     "versao": "8.3.1",
     "url_instalador": "https://auditorintegrado.com.br/downloads/teste/Instalador_Auditor_Fiscal_Integrado_v8_3_1_Setup.exe",
-    "sha256_instalador": "1cea2ae9679b51b0a1a374e60349179a5dcd2abfb91734e4e9ba2bd6f40dd447",
-    "tamanho_bytes": 20830869,
+    "sha256_instalador": "db0feefb87adc28b4731c473de368883c05c2952c115287f72d5e97cc104befc",
+    "tamanho_bytes": 20839450,
     "publicado_em": "2026-11-21",
-    "notas": "Versao de teste 8.3.1. Usada apenas para validar a atualizacao automatica. Nao instalar."
+    "notas": "Versão 8.3.1\n- Correção: depois da atualização automática, o programa reabre sozinho, sem mensagem de erro.\n- A interface agora funciona sem internet: o estilo das telas passou a vir embutido no programa.\n- Melhorias internas na preparação de novas versões."
   },
-  "assinatura_ed25519": "94c180b2ebd89d23fb5bbdabac949250eec336464f67350ceba885e200ba03745038b6a3b86b4f549a774f1eaac89185059ecdd65b94eeba36129c69569ce101"
+  "assinatura_ed25519": "9752148e6d4851c2be91a133a34e6457f51f3a17cd82427d2ff60b585745361637770381bb6f184ce9565d0d0bb4b2880e708766ccf6a95a7f1b3a2124562a00"
 }
